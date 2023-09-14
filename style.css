@@ -1,0 +1,353 @@
+:root
+{
+    --azul-enpro: #11A0CF;
+    --amarelo-enpro: #F5B005;
+    --laranja-avermelhado-enpro: #D63908;
+    --verde-enpro: #9AD03C;
+    --gradiente: #04001D;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.wrapper{
+    max-width: 1134px;
+    margin: 0 auto;
+}
+
+/* buttons */
+
+.btn{
+    padding: 16px 32px;
+    border-radius: 24px;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    position: relative;
+}
+
+.btn.dark{
+    background: var(--gradiente);
+}
+
+.btn.light{
+    background: var(--azul-enpro);
+}
+
+.btn.enrol-icon::before{
+    content: url(/images/enrol-icon.svg);
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    transform: translateY(-50%);
+}
+
+.btn.enrol-icon{
+    padding-left: 60px;
+}
+
+/* Header */
+
+header{
+    background: var(--gradiente);
+    height: 100vh;
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 1134px;
+    top: 36px;
+    z-index: 100;
+}
+
+nav .logo {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+nav .logo img{
+vertical-align: middle;
+padding: 15px;
+}
+
+
+nav .logo a {
+    color: #FFF;
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90%; /* 27px */
+    text-transform: uppercase;
+    text-decoration: none;
+}
+    
+
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li a{
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-media {
+    gap: 20px;
+}
+
+/* Hero section */
+
+.hero-section{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+.hero-section .left h1{
+    color: #FFF;
+    font-family: "Saira Condensed", sans-serif  ;
+    font-size: 80px;
+    font-weight: normal;
+    line-height: 100%;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.hero-section .left h1 span {
+    color: var(--azul-enpro);
+
+}
+
+.hero-section .left p{
+    color:  #FFF;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 23.4px */
+}
+
+.hero-section .left .barra-p {
+    border-left: 4px solid var(--azul-enpro); /* Cor e largura da barra esquerda */
+    padding-left: 10px; /* Espaço entre a barra e o texto do parágrafo */
+}
+
+.hero-section .left{
+    flex: 1;
+}
+
+.hero-section .right {
+    align-self: flex-end;
+}
+
+.hero-section .right img {
+    width: 450px;
+    height: 450px;
+    flex-shrink: 0;
+    transform: translateY(-50px);
+}
+
+
+/* Achievement cards */
+
+.achievement-card {
+    position: absolute;
+    min-width: 200px;
+}
+
+.achievement-card .content{
+    border-radius: 24px;
+    background: #fff;
+    padding: 8px 32px;
+    z-index: 10;
+    position: relative;
+}
+
+.achievement-card.students-enrolled {
+    left: 49%;
+    top: 270px;
+}
+
+.achievement-card.overall-rating {
+    left: 47%;
+    top: 470px;
+}
+
+.achievement-card .content div{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.achievement-card h3{
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: var(--dark-blue-color);
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.achievement-card p{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--dark-blue-color);
+    margin-top: -8;
+    margin-bottom: 8px;
+}
+
+.achievement-card .bg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, #6f7dfb 0%, #3b488f 100%);
+    border-radius: 24px;
+    top: 8px;
+    left: 8px;
+    z-index: 1;
+}
+
+
+/* Testimonials section */
+
+section{
+    margin-top: 100px;
+}
+
+h2{
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 120%;
+    margin: 0;
+    color: var(--dark-blue-color);
+}
+
+h2.light {
+    color: #fff;
+}
+
+section p{
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 200%;
+    color: var(--dark-blue-color);
+    margin: 12px, 0;
+}
+
+.testimonials-section{
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
+.testimonials-section .mobile-btn {
+    display: none;
+}
+
+.testimonials-section .testimonial-card {
+    width: 442px;
+    background: #FFF;
+    box-shadow: 0px 9px 36px rgba(0, 0, 0, 0.2);
+    border-radius: 24px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.testimonials-section .testimonial-card::before {
+    content: "";
+    width: 28px;
+    position: absolute;
+    height: 40px;
+    top: -40px;
+    left: 60px;
+    background: var(--dark-blue-color);
+    border-radius: 24px 24px 0 0;
+}
+
+.testimonials-section .testimonial-card .content {
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 150%;
+    color: #fff;
+    border-radius: 24px;
+    padding: 24px 32px;
+    background: var(--light-blue-color);
+}
+
+
+.testimonials-section .testimonial-card:last-child .content {
+    background: var(--azul-enpro);
+}
+
+.testimonials-section .testimonial-card .info h4 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 120%;
+    color: var(--dark-blue-color);
+}
+
+.testimonials-section .testimonial-card .info {
+    padding: 24px 32px;
+}
+
+.testimonials-section .testimonial-card .info p.company {
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120%;
+    color: var(--dark-blue-color);
+}
+
+.testimonials-section .testimonial-card img {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: 32px;
+    bottom: 20px;
+}
+
+.testimonials-section .testimonial-card:last-child {
+    transform: translateX(20px);
+}
+
+.testimonials-section .features {
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
