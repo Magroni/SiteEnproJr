@@ -158,6 +158,36 @@ nav ul li a{
     padding-left: 10px; /* Espaço entre a barra e o texto do parágrafo */
 }
 
+.hero-section .left .mini-menu ul{
+    margin-top: 40px;
+} 
+
+.hero-section .left .mini-menu ul li {
+    display: flexbox;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+
+.hero-section .left .mini-menu ul li a{
+    color:#FFF;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    text-decoration: none;
+}
+
+.hero-section .left .mini-menu ul li img {
+    vertical-align: middle; /* Alinha verticalmente a imagem com o texto do link */
+    max-width: 100%; /* Garanta que a imagem não seja maior do que o contêiner */
+    height: auto; /* Mantenha a proporção original da imagem */
+}
+
+.hero-section .left .mini-menu ul {
+    list-style: none;
+}
+
 .hero-section .left{
     flex: 1;
 }
