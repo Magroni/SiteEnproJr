@@ -278,7 +278,7 @@ h2{
     font-size: 60px;
     line-height: 120%;
     margin: 0;
-    color: var(--dark-blue-color);
+    color: white;
 }
 
 h2.light {
@@ -376,7 +376,10 @@ section p{
     margin-bottom: 30px;
 }
 
-
+footer{
+    background: black;
+    
+}
 
 
 
