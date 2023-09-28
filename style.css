@@ -266,121 +266,66 @@ nav ul li a{
 }
 
 
-/* Testimonials section */
+/* Our Services Section */
 
-section{
-    margin-top: 100px;
-}
-
-h2{
-    font-family: "Raleway", sans-serif;
-    font-weight: 900;
-    font-size: 60px;
-    line-height: 120%;
-    margin: 0;
-    color: white;
-}
-
-h2.light {
-    color: #fff;
-}
-
-section p{
-    font-family: "Poppins", sans-serif;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 200%;
-    color: var(--dark-blue-color);
-    margin: 12px, 0;
-}
-
-.testimonials-section{
+.carousel-container {
+    overflow: hidden;
+    max-width: 100%;
+  }
+  
+  .carousel {
     display: flex;
-    gap: 100px;
-    align-items: center;
-}
-
-.testimonials-section .mobile-btn {
-    display: none;
-}
-
-.testimonials-section .testimonial-card {
-    width: 442px;
-    background: #FFF;
-    box-shadow: 0px 9px 36px rgba(0, 0, 0, 0.2);
-    border-radius: 24px;
-    margin-bottom: 50px;
-    position: relative;
-}
-
-.testimonials-section .testimonial-card::before {
-    content: "";
-    width: 28px;
-    position: absolute;
-    height: 40px;
-    top: -40px;
-    left: 60px;
-    background: var(--dark-blue-color);
-    border-radius: 24px 24px 0 0;
-}
-
-.testimonials-section .testimonial-card .content {
-    font-family: "Raleway", sans-serif;
-    font-weight: 900;
-    font-size: 18px;
-    line-height: 150%;
+    overflow: hidden;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card {
+    flex: 0 0 33.33%; /* Garante que três cards apareçam na mesma linha */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f5f5f5; /* Cor de fundo dos cards */
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .card h2 {
+    margin: 10px 0;
+  }
+  
+  .card p {
+    margin-bottom: 20px;
+  }
+  
+  .card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Cor do botão "Saiba Mais" */
     color: #fff;
-    border-radius: 24px;
-    padding: 24px 32px;
-    background: var(--light-blue-color);
-}
-
-
-.testimonials-section .testimonial-card:last-child .content {
-    background: var(--azul-enpro);
-}
-
-.testimonials-section .testimonial-card .info h4 {
-    font-family: "Raleway", sans-serif;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 120%;
-    color: var(--dark-blue-color);
-}
-
-.testimonials-section .testimonial-card .info {
-    padding: 24px 32px;
-}
-
-.testimonials-section .testimonial-card .info p.company {
-    font-family: "Raleway", sans-serif;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 120%;
-    color: var(--dark-blue-color);
-}
-
-.testimonials-section .testimonial-card img {
-    width: 120px;
-    height: 120px;
-    position: absolute;
-    right: 32px;
-    bottom: 20px;
-}
-
-.testimonials-section .testimonial-card:last-child {
-    transform: translateX(20px);
-}
-
-.testimonials-section .features {
-    margin-bottom: 30px;
-}
-
-footer{
-    background: black;
-    
-}
-
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .prev, .next {
+    background-color: #007bff; /* Cor dos botões de navegação */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .prev {
+    margin-right: 10px;
+  }
+  
 
 
 
