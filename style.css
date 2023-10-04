@@ -191,17 +191,17 @@ nav ul li a{
 
 .hero-section .left{
     flex: 1;
+    text-align: left;
 }
 
 .hero-section .right {
-    align-self: flex-end;
+    flex: 1;
+    text-align: right;
 }
 
 .hero-section .right img {
     width: 450px;
     height: 450px;
-    flex-shrink: 0;
-    transform: translateY(-50px);
 }
 
 
