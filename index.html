@@ -167,9 +167,11 @@
 
                     <!-- Adicione mais cards conforme necessário -->
                 </div>
-                <div class="pagination"></div>
-                <button class="prev">Anterior</button>
-                <button class="next">Próximo</button>
+                <div class="carrossel-nav">
+                    <img class="prev" src="images/seta-left.png" alt="Anterior">
+                    <div class="pagination"></div>
+                    <img class="next" src="images/seta-right.png" alt="Próximo">
+                </div>
             </div>
 
 
@@ -197,12 +199,12 @@
                 }
 
                 function nextSlide() {
-                    currentIndex = (currentIndex + 1) % Math.min(cards.length - 2, cards.length-1);
+                    currentIndex = (currentIndex + 1) % Math.min(cards.length - 2, cards.length - 1);
                     showCards(currentIndex);
                 }
 
                 function prevSlide() {
-                    currentIndex = (currentIndex - 1 + Math.min(cards.length - 2, cards.length-1)) % Math.min(cards.length - 2, cards.length-1);
+                    currentIndex = (currentIndex - 1 + Math.min(cards.length - 2, cards.length - 1)) % Math.min(cards.length - 2, cards.length - 1);
                     showCards(currentIndex);
                 }
 
@@ -232,11 +234,11 @@
                 prevButton.addEventListener("click", prevSlide);
                 nextButton.addEventListener("click", nextSlide);
             </script>
-              
-              
-              
-              
-              
+
+
+
+
+
 
 
 
@@ -323,18 +325,18 @@
                         </li>
 
                         <li>
-                            <a href="#"style="text-decoration:none">Gestão da Qualidade</a>
+                            <a href="#" style="text-decoration:none">Gestão da Qualidade</a>
                         </li>
 
                         <li>
-                            <a href="#"style="text-decoration:none">Gestão da Estratégica e Organizacional</a>
+                            <a href="#" style="text-decoration:none">Gestão da Estratégica e Organizacional</a>
                         </li>
 
                         <li>
-                            <a href="#"style="text-decoration:none">Gestão Financeira</a>
+                            <a href="#" style="text-decoration:none">Gestão Financeira</a>
                         </li>
                         <li>
-                            <a href="#"style="text-decoration:none">Plano de Negócios</a>
+                            <a href="#" style="text-decoration:none">Plano de Negócios</a>
                         </li>
                     </ul>
                 </div>
@@ -343,29 +345,30 @@
                     <h4>Contatos</h4>
                     <ul>
                         <li>
-                            <a href="#"style="text-decoration:none">+55 (27) 32461616</a>
+                            <a href="#" style="text-decoration:none">+55 (27) 32461616</a>
                         </li>
 
                         <li>
-                            <a href="#"style="text-decoration:none">Zap</a>
+                            <a href="#" style="text-decoration:none">Zap</a>
                         </li>
 
                         <li>
-                            <a href="#"style="text-decoration:none">contato@enprojunior.com.br</a>
+                            <a href="#" style="text-decoration:none">contato@enprojunior.com.br</a>
                         </li>
                         <li>
-                            <a href="#"style="text-decoration:none">Rod. Gov. José Henrique Sette, 184 - Itacibá, Cariacica - Espírito Santo,
+                            <a href="#" style="text-decoration:none">Rod. Gov. José Henrique Sette, 184 - Itacibá,
+                                Cariacica - Espírito Santo,
                                 29150-510</a>
                         </li>
                         <li>
-                            <a href="#"style="text-decoration:none">Segunda - Sexta: 08h às 16h</a>
+                            <a href="#" style="text-decoration:none">Segunda - Sexta: 08h às 16h</a>
                         </li>
                     </ul>
                 </div>
-                </div>
             </div>
+        </div>
 
-            <p class="copyright">This website is developed by EnproJR © 2023</p>
+        <p class="copyright">This website is developed by EnproJR © 2023</p>
 
         </div>
     </footer>

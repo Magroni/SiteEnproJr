@@ -274,7 +274,6 @@ nav ul li a {
 
 
 /* Our Services Section */
-
 .our-services-card-section .our-services-title {
     color: var(--Amarrelo-enpro, #F5B005);
     text-align: center;
@@ -335,15 +334,20 @@ nav ul li a {
 
 .prev,
 .next {
-    background-color: #007bff;
     /* Cor dos botões de navegação */
-    color: #fff;
     border: none;
-    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    max-width: 100%; /* Defina a largura máxima para 100% do contêiner */
+    max-height: 40px; /* Defina a altura máxima desejada */
+    margin: 0 10px;
+    transition: transform 0.2s ease;
 }
 
+.next:hover,.prev:hover{
+    
+    transform: scale(1.1);
+}
 .prev {
     margin-right: 10px;
 }
@@ -370,7 +374,8 @@ nav ul li a {
 
 .pagination {
     text-align: center;
-    margin-top: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .dot {
@@ -381,12 +386,28 @@ nav ul li a {
     display: inline-block;
     margin: 0 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s
+    transition: transform 0.2s ease; 
+}
+.dot:hover{
+    transform: scale(1.2);
 }
 
 .dot.active {
     background-color: #007bff;
 }
+
+.carrossel-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+    height: 100px; /* Defina a altura desejada */
+}
+
+
+
+/*FOOTER*/
+
 
 footer{
     display: -webkit-flex;
