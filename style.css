@@ -466,8 +466,6 @@ nav ul li a {
     text-align: end;
 }
 
-.cases-section .left img {}
-
 #end-qr {
     width: 381px;
 }
@@ -498,62 +496,30 @@ nav ul li a {
 /*FOOTER*/
 
 
-footer {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
+.app-section {
+display: flex;
     flex-flow: row wrap;
     padding: 50px;
     color: #FFF;
     background-color: #222;
 }
 
-footer-left {
-    margin-right: 1.25em;
-    margin-bottom: 2em;
+.app-section .content-container {
+    display: flex;
+    
 }
 
-footer-left img {
-    width: 50%;
-}
-
-footer ul {
+.app-section ul {
     list-style: none;
     padding-left: 0;
 }
 
-footer li {
+.app-section li {
     line-height: 2em;
 }
 
-footer-rigth {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    flex-flow: row wrap;
-}
 
-footer-rigth>* {
-    flex: 1 50%;
-    margin-right: 1.25em;
-}
-
-footer-bottom {
-    text-align: center;
-    color: #999;
-    padding-top: 50px;
-}
-
-footer-left p {
-    padding-right: 20%;
-    color: #999;
-}
-
-.wrapper .app-section h2 {
+.app-section h2 {
     font-weight: 600;
     font-size: 17px;
     color: #FFF;
@@ -566,7 +532,7 @@ footer-left p {
     margin: 0;
 }
 
-.wrapper .app-section h2 span {
+.app-section h2 span {
     color: #FFF;
     font-family: "Souliyo Unicode", sans-serif;
     font-size: 20px;
@@ -576,13 +542,19 @@ footer-left p {
     letter-spacing: 19.5px;
     text-transform: uppercase;
 }
-.wrapper .app-section .logo-rodape{
+.app-section .logo-rodape{
+    display: flex;
+    flex-direction: column;
+}
+
+.app-section .logo-rodape .logo-enpro-img{
     display: flex;
     align-items: center;
     vertical-align: middle;
 }
-.wrapper .app-section #midia-social-rodape img{
-    display: flex;
+
+.app-section #midia-social-rodape img{
+display: flex;
     width: 90%; 
     height: auto;
 }
@@ -595,16 +567,23 @@ footer-left p {
 
 }
 
-.wrapper .links-container {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
+.lista-servicos {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
+    height: 240px;
+    width: 202px;
 }
 
-.wrapper .links-container .links h3 {
+.lista-contatos {
+    display: flex;
+    flex-direction: column;
+    height: 240px;
+    width: 202px;
+}
+
+
+
+.lista-servicos h3 {
     color: #FFF;
     font-family: Inter;
     font-size: 22px;
@@ -615,7 +594,17 @@ footer-left p {
     text-transform: uppercase;
 }
 
-.wrapper .links-container .links ul li a{
+.lista-servicos ul li a{
+    color: #D0D0D0;
+font-family: Inter;
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 400;
+line-height: 100%; /* 0.875rem */
+text-decoration: none;
+}
+
+ .lista-contatos ul li p{
     list-style-type: none;
     flex-flow: row wrap;
     color: #D0D0D0;
@@ -625,3 +614,20 @@ footer-left p {
     font-weight: 400;
     line-height: 100%;
 }
+
+.lista-contatos ul li{
+    display: flex;
+    vertical-align: middle;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.lista-contatos ul li img{
+    height: 22px;
+    width: 22px;
+    margin-right: 13px;
+}
+
