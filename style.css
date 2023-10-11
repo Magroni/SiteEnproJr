@@ -532,12 +532,17 @@ nav ul li a {
 
 /*FOOTER*/
 
+.logo-rodape {
+    display: flex;
+    align-items: center;
+}
+
+#midia-social-rodape{
+    display: flex;
+    gap: 13px;
+}
 
 footer {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
     display: flex;
     flex-flow: row wrap;
     padding: 50px;
@@ -545,7 +550,7 @@ footer {
     background-color: #222;
 }
 
-.footer>* {
+.footer {
     flex: 1 100%;
 }
 
@@ -568,10 +573,6 @@ footer {
 }
 
 .footer-rigth {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
     display: flex;
     flex-flow: row wrap;
 }
@@ -614,7 +615,7 @@ footer {
     font-weight: 600;
     font-size: 17px;
     color: #FFF;
-    font-family: Sans Serif Collection;
+    font-family: "Sans Serif Collection";
     font-size: 50px;
     font-style: normal;
     font-weight: 400;
@@ -625,7 +626,7 @@ footer {
 
 .wrapper .app-section h2 span {
     color: #FFF;
-    font-family: Souliyo Unicode;
+    font-family: "Souliyo Unicode", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -636,10 +637,6 @@ footer {
 }
 
 .wrapper .links-container {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
     display: flex;
     flex-flow: row wrap;
 }
