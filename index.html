@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
@@ -116,10 +116,10 @@
     <div class="wrapper">
         <section class="our-services-card-section">
             <h2 class="our-services-title">Nossos Serviços</h2>
-            <div class="carousel-container">
+            <div class="primeiro-carousel-container">
                 <div class="carousel">
-                    <div class="card">
-                        <img src="images/power.jpg" alt="Imagem 1">
+                    <div class="primeiro-card">
+                        <img src="images/cartilhaimg.png" alt="Imagem 1">
                         <h2>Gestão da qualidade</h2>
                         <p>Consultoria especializada em gestão da qualidade para melhorar seus processos e produtos.</p>
                         <div class="saibamais">
@@ -127,7 +127,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="primeiro-card">
                         <img src="images/cartilhaimg.png" alt="Imagem 2">
                         <h2>Gestão Estratégica e Organizacional</h2>
                         <p>Alcance a excelência com nossa Consultoria em Gestão Estratégica e Organizacional para
@@ -137,7 +137,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="primeiro-card">
                         <img src="images/cartilhaimg.png" alt="Imagem 2">
                         <h2>Gestão Financeira</h2>
                         <p>Otimização financeira e organizacional para impulsionar seus resultados.</p>
@@ -146,7 +146,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="primeiro-card">
                         <img src="images/cartilhaimg.png" alt="Imagem 2">
                         <h2>Lorem ipsum</h2>
                         <p>Otimização financeira e organizacional para impulsionar seus resultados.</p>
@@ -154,8 +154,8 @@
                             <a href="#">Saiba mais →</a>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="images/cartilhaimg.png" alt="Imagem 2">
+                    <div class="primeiro-card">
+                        <img src="images/power.jpg" alt="Imagem 2">
                         <h2>Losssssum</h2>
                         <p>Otimização financeira e organizacional para impulsionar seus resultados.</p>
                         <div class="saibamais">
@@ -175,65 +175,7 @@
             </div>
 
 
-            <script>
-                const carousel = document.querySelector(".carousel");
-                const cards = document.querySelectorAll(".card");
-                const prevButton = document.querySelector(".prev");
-                const nextButton = document.querySelector(".next");
-                const pagination = document.querySelector(".pagination");
 
-                let currentIndex = 0;
-
-                function showCards(index) {
-                    const startPosition = -index * 33.33;
-                    carousel.style.transform = `translateX(${startPosition}%)`;
-
-                    // Atualiza os indicadores de página
-                    const dots = document.querySelectorAll(".dot");
-                    dots.forEach((dot, i) => {
-                        dot.classList.remove("active");
-                        if (i === index) {
-                            dot.classList.add("active");
-                        }
-                    });
-                }
-
-                function nextSlide() {
-                    currentIndex = (currentIndex + 1) % Math.min(cards.length - 2, cards.length - 1);
-                    showCards(currentIndex);
-                }
-
-                function prevSlide() {
-                    currentIndex = (currentIndex - 1 + Math.min(cards.length - 2, cards.length - 1)) % Math.min(cards.length - 2, cards.length - 1);
-                    showCards(currentIndex);
-                }
-
-                // Atualiza o número de dots com base na quantidade de cards
-                function updateDots() {
-                    const numDots = cards.length - 2;
-
-                    // Cria os indicadores de página com base no número de dots
-                    for (let i = 0; i < numDots; i++) {
-                        const dot = document.createElement("div");
-                        dot.classList.add("dot");
-                        if (i === currentIndex) {
-                            dot.classList.add("active");
-                        }
-                        dot.addEventListener("click", () => {
-                            currentIndex = i;
-                            showCards(currentIndex);
-                        });
-                        pagination.appendChild(dot);
-                    }
-                }
-
-                // Inicializa o carrossel e os dots
-                showCards(currentIndex);
-                updateDots();
-
-                prevButton.addEventListener("click", prevSlide);
-                nextButton.addEventListener("click", nextSlide);
-            </script>
         </section>
     </div>
 
@@ -272,146 +214,180 @@
     <!-- cartilhas cases section -->
 
     <div class="wrapper">
-        <section class="cases-section">
-
-            <div class="left">
-                <h2>Cartilhas</h2>
-                <p>Conheça mais sobre os membros, nossas histórias,
-                    consultorias e nossos casos de sucesso através de nossas cartilhas quinzenais.
-                </p>
-                <img src="images/qrcode.svg" alt="">
-                <p id="end-qr">
-                    Receba nossas notificações
-                    através do QR Code
-                </p>
-            </div>
-
-            <div class="right">
-                <div class="vertical-carousel">
-                    <img src="images/caseimg.png" alt="">
-                    <div class="content">
-                        <h2>
-                            SEILA
-                        </h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, 
-                            adipisicing elit. Asperiores optio libero ad, commodi molestiae est
-                            laborum cumque cupiditate rem ex rerum ratione quis officiis 
-                            voluptatem labore eaque debitis corrupti repudiandae!
-                        </p>
-                        <div id="saibamais-cases">
-                            <a href="">Saiba mais</a>
-                        </div>
-                    </div>
+        <section class="our-services-card-section">
+            <h2 class="our-services-title">Cartilhas</h2>
+            <div class="qr-cases-section">
+                <div class="qr-code-card">
+                    <img id="qr-code-logo-enpro" src="images/logo-redonda.svg" alt="">
+                    <p>EnproJr🚀 ---> IFES</p>
+                    <img id="qrcodebase" src="images/qrcode zap.png" alt="">
+                </div>
+                <div class="qr-cases-text">
+                    <p>Faça parte do nosso grupo de WhatsApp
+                        <span id="qr-text-alunos">Para alunos e </span>
+                        <span id="qr-text-servidores">servidores</span>
+                        Conheça as ferramentas que utilizamos,
+                        o dia a dia de trabalho da empresa e os projetos
+                        que estão sendo executados. Bora?
+                    </p>
                 </div>
             </div>
-    </div>
-    </section>
+            <div class="segundo-carousel-container">
+                <div class="carousel">
+                    <div class="segundo-card">
+                        <img src="images/cartilhaimg.png" alt="Imagem 1">
+                        <h2>Cartilha 1</h2>
+                        <p>Consultoria especializada em gestão da qualidade para melhorar seus processos e produtos.</p>
+                        <div class="saibamais">
+                            <a href="#">Saiba mais →</a>
+                        </div>
+                    </div>
 
+                    <div class="segundo-card">
+                        <img src="images/cartilhaimg.png" alt="Imagem 2">
+                        <h2>cartilha 2</h2>
+                        <p>Alcance a excelência com nossa Consultoria em Gestão Estratégica e Organizacional para
+                            impulsionar seu sucesso empresarial.</p>
+                        <div class="saibamais">
+                            <a href="#">Saiba mais →</a>
+                        </div>
+                    </div>
+
+                    <div class="segundo-card">
+                        <img src="images/cartilhaimg.png" alt="Imagem 2">
+                        <h2>cartilha 3</h2>
+                        <p>Otimização financeira e organizacional para impulsionar seus resultados.</p>
+                        <div class="saibamais">
+                            <a href="#">Saiba mais →</a>
+                        </div>
+                    </div>
+
+                    <div class="segundo-card">
+                        <img src="images/cartilhaimg.png" alt="Imagem 2">
+                        <h2>cartilha 4</h2>
+                        <p>Otimização financeira e organizacional para impulsionar seus resultados.</p>
+                        <div class="saibamais">
+                            <a href="#">Saiba mais →</a>
+                        </div>
+                    </div>
+                    <div class="segundo-card">
+                        <img src="images/power.jpg  " alt="Imagem 2">
+                        <h2>cartilha 5</h2>
+                        <p>Otimização financeira e organizacional para impulsionar seus resultados.</p>
+                        <div class="saibamais">
+                            <a href="#">Saiba mais →</a>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Adicione mais cards conforme necessário -->
+                </div>
+                <div class="carrossel-nav">
+                    <img class="prev" src="images/seta-left.png" alt="Anterior">
+                    <div class="pagination"></div>
+                    <img class="next" src="images/seta-right.png" alt="Próximo">
+                </div>
+            </div>
+
+
+
+        </section>
+    </div>
 
     <!-- End of the app section -->
 
     <footer>
         <div class="wrapper">
-            <section class="app-section">
-                <div class="logo-rodape">
-                    <h2>ENPRO<span><br />JÚNIOR</span>
-                    </h2>
-                    <img src="images/logo 1.svg" alt="">
-                </div>
-                <ul id="midia-social-rodape">
-                    <li>
-                        <a href="#">
-                            <img src="images/zap-icon.svg" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="images/Instagram.svg" alt="">
-
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="images/Linkedin.svg" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="images/facebook.svg" alt="">
-                        </a>
-                    </li>
-                </ul>
-
-        </div>
-        </div>
-        </section>
-        </div>
-        <div class="wrapper">
-            <div class="links-container">
-                <div class="links">
-                    <h3>Serviços</h3>
-                    <ul>
+            <div class="footer-stuff">
+                <div class="app-section">
+                    <div class="logo-rodape">
+                        <h2>ENPRO<span><br />JÚNIOR</span>
+                        </h2>
+                        <img src="images/logo 1.svg" alt="">
+                    </div>
+                    <ul id="midia-social-rodape">
                         <li>
-                            <a href="#" style="text-decoration:none">Gestão da produção</a>
-                        </li>
-
-                        <li>
-                            <a href="#" style="text-decoration:none">Gestão da Qualidade</a>
-                        </li>
-
-                        <li>
-                            <a href="#" style="text-decoration:none">Gestão da Estratégica e Organizacional</a>
-                        </li>
-
-                        <li>
-                            <a href="#" style="text-decoration:none">Gestão Financeira</a>
+                            <a href="#">
+                                <img src="images/zap-icon.svg" alt="">
+                            </a>
                         </li>
                         <li>
-                            <a href="#" style="text-decoration:none">Plano de Negócios</a>
+                            <a href="#">
+                                <img src="images/Instagram.svg" alt="">
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/Linkedin.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/facebook.svg" alt="">
+                            </a>
                         </li>
                     </ul>
                 </div>
+                <div class="links-footer">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li>
+                            <a href="#">Gestão da produção</a>
+                        </li>
 
-                <div class="links">
+                        <li>
+                            <a href="#">Gestão da Qualidade</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Gestão da Estratégica e Organizacional</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Gestão Financeira</a>
+                        </li>
+                        <li>
+                            <a href="#">Plano de Negócios</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contatos-footer">
                     <h3>Contatos</h3>
                     <ul>
                         <li>
-                            <img src="" alt="">
+                            <img src="images/phone-footer.png" alt="">
                             <p>+55 (27) 32461616</p>
                         </li>
 
                         <li>
-                            <img src="" alt="">
+                            <img src="images/zap-footer.png" alt="">
                             <p>Zap</p>
                         </li>
 
                         <li>
-                            <img src="" alt="">
+                            <img src="images/email-footer.png" alt="">
                             <p>contato@enprojunior.com.br</p>
                         </li>
                         <li>
-                            <img src="" alt="">
-                            <p>Rod. Gov. José Henrique Sette, 184 - Itacibá,
+                            <img src="images/location-footer.png" alt="">
+                            <p>Rod. Gov. José Henrique Sette, 184 - Itacibá,<br>
                                 Cariacica - Espírito Santo,
                                 29150-510</p>
                         </li>
                         <li>
-                            <img src="" alt="">
+                            <img src="images/clock-footer.png" alt="">
                             <p>Segunda - Sexta: 08h às 16h</p>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-
-        <p class="copyright">This website is developed by EnproJR © 2023</p>
-
-        </div>
+        <!--<p class="copyright">This website is developed by EnproJR © 2023</p>-->
     </footer>
 
-    <script src="main.js"></script>
-
+    <script src="js/main.js"></script>
 </body>
 
 </html>
